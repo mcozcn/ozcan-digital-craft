@@ -66,7 +66,7 @@ const Footer: React.FC<FooterProps> = ({ language, toggleLanguage }) => {
             {/* Social Links */}
             <div className="flex space-x-4">
               <a
-                href="https://linkedin.com/in/mucahitozcan"
+                href="https://www.linkedin.com/in/mcozcn/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gold hover:text-navy transition-all duration-300"
@@ -74,7 +74,7 @@ const Footer: React.FC<FooterProps> = ({ language, toggleLanguage }) => {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:mucahit@example.com"
+                href="mailto:mcozcn@gmail.com"
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gold hover:text-navy transition-all duration-300"
               >
                 <Mail size={20} />
@@ -106,9 +106,9 @@ const Footer: React.FC<FooterProps> = ({ language, toggleLanguage }) => {
               {language === 'tr' ? 'İletişim' : 'Contact'}
             </h4>
             <div className="space-y-2 font-inter text-gray-300">
-              <p>mucahit@example.com</p>
-              <p>+90 532 123 45 67</p>
-              <p>{language === 'tr' ? 'İstanbul, Türkiye' : 'Istanbul, Turkey'}</p>
+              <p>mcozcn@gmail.com</p>
+              <p>+90 532 720 13 07</p>
+              <p>{language === 'tr' ? 'Antalya, Türkiye' : 'Antalya, Turkey'}</p>
             </div>
             
             {/* Language Switcher */}

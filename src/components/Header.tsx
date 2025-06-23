@@ -87,14 +87,21 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage }) => {
     }`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex flex-col">
-            <h1 className="text-xl md:text-2xl font-poppins font-bold text-white tracking-wide">
-              MÜCAHİT ÖZCAN
-            </h1>
-            <p className="text-xs md:text-sm font-inter text-gold font-medium">
-              {t.slogan}
-            </p>
+          {/* Logo & Brand */}
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/7b7b861f-4b8a-4101-afd5-9be80ed50d1f.png" 
+              alt="Mücahit Özcan Logo" 
+              className="w-10 h-10 object-contain"
+            />
+            <div className="flex flex-col">
+              <h1 className="text-xl md:text-2xl font-poppins font-bold text-white tracking-wide">
+                MÜCAHİT ÖZCAN
+              </h1>
+              <p className="text-xs md:text-sm font-inter text-gold font-medium">
+                {t.slogan}
+              </p>
+            </div>
           </div>
 
           {/* Desktop Navigation */}

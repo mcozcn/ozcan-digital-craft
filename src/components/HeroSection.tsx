@@ -35,7 +35,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language }) => {
   };
 
   return (
-    <section id="home" className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-primary">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10"></div>
@@ -62,7 +62,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language }) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button
               onClick={() => scrollToSection('projects')}
-              className="bg-gold hover:bg-gold/90 text-navy font-poppins font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl animate-pulse-glow"
+              className="bg-white hover:bg-gray-100 text-navy font-poppins font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
             >
               {t.exploreProjects}
               <ArrowRight className="ml-2" size={20} />

@@ -33,7 +33,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
           category: 'mobile',
           description: 'Randevu, müşteri ve envanter yönetimi için mobil uygulama ve sistem.',
           result: 'Rezervasyonlarda %40 artış ve müşteri memnuniyeti.',
-          image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          image: '/lovable-uploads/353dbb37-91b0-4b78-be76-b84c48b3a4f0.png',
           cta: 'Uygulamayı İncele',
           link: 'https://beautiq.lovable.app/'
         },
@@ -44,7 +44,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
           category: 'website',
           description: 'Güvenlik ve BT çözümleri için SEO optimize, responsive kurumsal website.',
           result: '%60 organik trafik artışı, %30 lead artışı.',
-          image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          image: '/lovable-uploads/d7f90baa-53aa-433e-a622-72bc8ba60aed.png',
           cta: 'Siteyi Ziyaret Et',
           link: 'https://www.antalyaturkuaz.com/'
         },
@@ -55,7 +55,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
           category: 'catalog',
           description: '3D görsel, sanal tur ve dinamik fiyatlandırma ile interaktif katalog.',
           result: 'Satış sürecinde akıcılık, prestij artışı.',
-          image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          image: '/lovable-uploads/6527f87d-48b6-40cb-a306-0b4559eadfe7.png',
           cta: 'Kataloğu Gör',
           link: 'https://mcozcn.github.io/mucahitozcan/documents/hanedan-konaklari-katalog.pdf'
         },
@@ -66,7 +66,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
           category: 'training',
           description: 'Fabrika süreçleri için dijital rehber ve eğitim platformu.',
           result: '%35 öğrenme süresi azalması, %90 sınav başarısı.',
-          image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          image: '/lovable-uploads/4eec5db9-b4c5-4bfa-8935-54f2dc372b6d.png',
           cta: 'Sistemi İncele',
           link: 'https://mcozcn.github.io/mucahitozcan/documents/degirmen-kilavuz-sistemi.pdf'
         }
@@ -93,7 +93,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
           category: 'mobile',
           description: 'Mobile app and system for appointment, customer, and inventory management.',
           result: '40% increase in bookings and customer satisfaction.',
-          image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          image: '/lovable-uploads/353dbb37-91b0-4b78-be76-b84c48b3a4f0.png',
           cta: 'View App',
           link: 'https://beautiq.lovable.app/'
         },
@@ -104,7 +104,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
           category: 'website',
           description: 'SEO-optimized, responsive corporate website for security and IT solutions.',
           result: '60% organic traffic growth, 30% lead increase.',
-          image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          image: '/lovable-uploads/d7f90baa-53aa-433e-a622-72bc8ba60aed.png',
           cta: 'Visit Site',
           link: 'https://www.antalyaturkuaz.com/'
         },
@@ -115,7 +115,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
           category: 'catalog',
           description: 'Interactive catalog with 3D visuals, virtual tours, and dynamic pricing.',
           result: 'Streamlined sales process, enhanced prestige.',
-          image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          image: '/lovable-uploads/6527f87d-48b6-40cb-a306-0b4559eadfe7.png',
           cta: 'View Catalog',
           link: 'https://mcozcn.github.io/mucahitozcan/documents/hanedan-konaklari-katalog.pdf'
         },
@@ -126,7 +126,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
           category: 'training',
           description: 'Digital guide and training platform for factory processes.',
           result: '35% reduced learning time, 90% exam success rate.',
-          image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+          image: '/lovable-uploads/4eec5db9-b4c5-4bfa-8935-54f2dc372b6d.png',
           cta: 'View System',
           link: 'https://mcozcn.github.io/mucahitozcan/documents/degirmen-kilavuz-sistemi.pdf'
         }
