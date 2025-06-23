@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -35,7 +34,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language }) => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-primary">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10"></div>
@@ -51,15 +50,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language }) => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="animate-fade-in">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-poppins font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-poppins font-bold text-white mb-6 leading-tight">
             {t.headline}
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl font-inter text-neutral-light mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl font-inter text-neutral-light mb-8 max-w-3xl mx-auto leading-relaxed">
             {t.subheadline}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button
               onClick={() => scrollToSection('projects')}
               className="bg-gold hover:bg-gold/90 text-navy font-poppins font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl animate-pulse-glow"
@@ -71,7 +70,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language }) => {
             <Button
               onClick={() => scrollToSection('contact')}
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-navy font-poppins font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105"
+              className="border-2 border-white text-white hover:bg-white hover:text-navy font-poppins font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               {t.contactMe}
             </Button>

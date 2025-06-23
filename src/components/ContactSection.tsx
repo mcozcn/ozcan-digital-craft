@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Linkedin, Send, MapPin, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -32,9 +31,9 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
       messagePlaceholder: 'Projeniz hakkında detayları paylaşın...',
       sendMessage: 'Mesaj Gönder',
       sending: 'Gönderiliyor...',
-      email: 'mucahit@example.com',
-      phone: '+90 532 123 45 67',
-      location: 'İstanbul, Türkiye',
+      email: 'mcozcn@gmail.com',
+      phone: '+90 532 720 13 07',
+      location: 'Antalya, Türkiye',
       successMessage: 'Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağım.',
       errorMessage: 'Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.',
       linkedinProfile: 'LinkedIn Profilim'
@@ -50,9 +49,9 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
       messagePlaceholder: 'Share details about your project...',
       sendMessage: 'Send Message',
       sending: 'Sending...',
-      email: 'mucahit@example.com',
-      phone: '+90 532 123 45 67',
-      location: 'Istanbul, Turkey',
+      email: 'mcozcn@gmail.com',
+      phone: '+90 532 720 13 07',
+      location: 'Antalya, Turkey',
       successMessage: 'Your message has been sent successfully! I will get back to you soon.',
       errorMessage: 'An error occurred while sending the message. Please try again.',
       linkedinProfile: 'My LinkedIn Profile'
@@ -120,7 +119,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ language }) => {
       icon: Linkedin,
       label: 'LinkedIn',
       value: t.linkedinProfile,
-      href: 'https://linkedin.com/in/mucahitozcan',
+      href: 'https://www.linkedin.com/in/mcozcn/',
       color: 'text-blue-800'
     }
   ];

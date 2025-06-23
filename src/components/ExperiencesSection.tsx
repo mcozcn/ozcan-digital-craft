@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Briefcase, TrendingUp, Users, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -137,7 +136,7 @@ const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({ language }) => 
         </div>
 
         {/* Timeline */}
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-6xl mx-auto">
           {/* Vertical line */}
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gold transform md:-translate-x-1/2"></div>
 
@@ -159,7 +158,7 @@ const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({ language }) => 
                 </div>
 
                 {/* Content */}
-                <div className={`w-full md:w-5/12 ${isEven ? 'md:pr-8' : 'md:pl-8'} ml-16 md:ml-0`}>
+                <div className={`w-full md:w-6/12 ${isEven ? 'md:pr-12' : 'md:pl-12'} ml-16 md:ml-0`}>
                   <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 group">
                     <div className="flex items-center mb-4">
                       <div className="w-12 h-12 bg-navy/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-gold/20 transition-colors duration-300">
