@@ -1,14 +1,13 @@
-
 import React from 'react';
 import { Brain, Users, Laptop, Target } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-
 interface AboutSectionProps {
   language: 'tr' | 'en';
 }
-
-const AboutSection: React.FC<AboutSectionProps> = ({ language }) => {
+const AboutSection: React.FC<AboutSectionProps> = ({
+  language
+}) => {
   const translations = {
     tr: {
       title: 'Hakkımda',
@@ -61,45 +60,37 @@ const AboutSection: React.FC<AboutSectionProps> = ({ language }) => {
       }
     }
   };
-
   const t = translations[language];
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  const strengths = [
-    {
-      icon: Brain,
-      title: t.strengths.strategic.title,
-      description: t.strengths.strategic.description,
-      color: 'text-gold'
-    },
-    {
-      icon: Users,
-      title: t.strengths.leadership.title,
-      description: t.strengths.leadership.description,
-      color: 'text-navy'
-    },
-    {
-      icon: Laptop,
-      title: t.strengths.technical.title,
-      description: t.strengths.technical.description,
-      color: 'text-gold'
-    },
-    {
-      icon: Target,
-      title: t.strengths.client.title,
-      description: t.strengths.client.description,
-      color: 'text-navy'
-    }
-  ];
-
-  return (
-    <section id="about" className="py-20 bg-white">
+  const strengths = [{
+    icon: Brain,
+    title: t.strengths.strategic.title,
+    description: t.strengths.strategic.description,
+    color: 'text-gold'
+  }, {
+    icon: Users,
+    title: t.strengths.leadership.title,
+    description: t.strengths.leadership.description,
+    color: 'text-navy'
+  }, {
+    icon: Laptop,
+    title: t.strengths.technical.title,
+    description: t.strengths.technical.description,
+    color: 'text-gold'
+  }, {
+    icon: Target,
+    title: t.strengths.client.title,
+    description: t.strengths.client.description,
+    color: 'text-navy'
+  }];
+  return <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -124,10 +115,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ language }) => {
               </p>
             </div>
             
-            <Button
-              onClick={() => scrollToSection('experiences')}
-              className="bg-navy hover:bg-navy/90 text-white font-poppins font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
-            >
+            <Button onClick={() => scrollToSection('experiences')} className="bg-navy hover:bg-navy/90 text-white font-poppins font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg">
               {t.exploreExperiences}
             </Button>
           </div>
@@ -136,11 +124,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ language }) => {
           <div className="flex justify-center animate-fade-in-right">
             <div className="relative">
               <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                <img
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Mücahit Özcan"
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Mücahit Özcan" src="/lovable-uploads/db14ff56-c72a-42cd-83dc-d266069e8240.png" className="w-full h-full object-contain" />
               </div>
               <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gold rounded-full flex items-center justify-center shadow-lg">
                 <span className="text-2xl">🚀</span>
@@ -152,13 +136,10 @@ const AboutSection: React.FC<AboutSectionProps> = ({ language }) => {
         {/* Core Strengths */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {strengths.map((strength, index) => {
-            const IconComponent = strength.icon;
-            return (
-              <Card
-                key={index}
-                className="group hover:shadow-xl transition-all duration-300 hover:scale-105 border-0 shadow-lg"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+          const IconComponent = strength.icon;
+          return <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:scale-105 border-0 shadow-lg" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <CardContent className="p-6 text-center">
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-50 mb-4 group-hover:bg-gray-100 transition-colors duration-300`}>
                     <IconComponent className={`w-8 h-8 ${strength.color}`} />
@@ -172,13 +153,10 @@ const AboutSection: React.FC<AboutSectionProps> = ({ language }) => {
                     {strength.description}
                   </p>
                 </CardContent>
-              </Card>
-            );
-          })}
+              </Card>;
+        })}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
