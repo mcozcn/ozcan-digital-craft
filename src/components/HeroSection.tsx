@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -34,7 +35,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language }) => {
   };
 
   return (
-    <section id="home" className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-primary">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10"></div>
@@ -69,8 +70,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language }) => {
             
             <Button
               onClick={() => scrollToSection('contact')}
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-navy font-poppins font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="bg-gold hover:bg-gold/90 text-navy font-poppins font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               {t.contactMe}
             </Button>

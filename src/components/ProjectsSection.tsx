@@ -34,7 +34,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
           description: 'Randevu, müşteri ve envanter yönetimi için mobil uygulama ve sistem.',
           result: 'Rezervasyonlarda %40 artış ve müşteri memnuniyeti.',
           image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-          cta: 'Uygulamayı İncele'
+          cta: 'Uygulamayı İncele',
+          link: 'https://beautiq.lovable.app/'
         },
         {
           title: 'Antalya Turkuaz Website',
@@ -44,7 +45,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
           description: 'Güvenlik ve BT çözümleri için SEO optimize, responsive kurumsal website.',
           result: '%60 organik trafik artışı, %30 lead artışı.',
           image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-          cta: 'Siteyi Ziyaret Et'
+          cta: 'Siteyi Ziyaret Et',
+          link: 'https://www.antalyaturkuaz.com/'
         },
         {
           title: 'Hanedan Konakları',
@@ -54,17 +56,19 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
           description: '3D görsel, sanal tur ve dinamik fiyatlandırma ile interaktif katalog.',
           result: 'Satış sürecinde akıcılık, prestij artışı.',
           image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-          cta: 'Kataloğu Gör'
+          cta: 'Kataloğu Gör',
+          link: 'https://mcozcn.github.io/mucahitozcan/documents/hanedan-konaklari-katalog.pdf'
         },
         {
-          title: 'Değirmen Factory',
-          subtitle: 'Üretim Rehberi & Eğitim Sistemi',
+          title: 'Değirmen Fabrika',
+          subtitle: 'Üretim Kılavuzu ve Eğitim Sistemi',
           year: '2024',
           category: 'training',
           description: 'Fabrika süreçleri için dijital rehber ve eğitim platformu.',
           result: '%35 öğrenme süresi azalması, %90 sınav başarısı.',
           image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-          cta: 'Sistemi İncele'
+          cta: 'Sistemi İncele',
+          link: 'https://mcozcn.github.io/mucahitozcan/documents/degirmen-kilavuz-sistemi.pdf'
         }
       ]
     },
@@ -90,7 +94,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
           description: 'Mobile app and system for appointment, customer, and inventory management.',
           result: '40% increase in bookings and customer satisfaction.',
           image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-          cta: 'View App'
+          cta: 'View App',
+          link: 'https://beautiq.lovable.app/'
         },
         {
           title: 'Antalya Turkuaz Website',
@@ -100,7 +105,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
           description: 'SEO-optimized, responsive corporate website for security and IT solutions.',
           result: '60% organic traffic growth, 30% lead increase.',
           image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-          cta: 'Visit Site'
+          cta: 'Visit Site',
+          link: 'https://www.antalyaturkuaz.com/'
         },
         {
           title: 'Hanedan Konakları',
@@ -110,7 +116,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
           description: 'Interactive catalog with 3D visuals, virtual tours, and dynamic pricing.',
           result: 'Streamlined sales process, enhanced prestige.',
           image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-          cta: 'View Catalog'
+          cta: 'View Catalog',
+          link: 'https://mcozcn.github.io/mucahitozcan/documents/hanedan-konaklari-katalog.pdf'
         },
         {
           title: 'Değirmen Factory',
@@ -120,7 +127,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
           description: 'Digital guide and training platform for factory processes.',
           result: '35% reduced learning time, 90% exam success rate.',
           image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-          cta: 'View System'
+          cta: 'View System',
+          link: 'https://mcozcn.github.io/mucahitozcan/documents/degirmen-kilavuz-sistemi.pdf'
         }
       ]
     }
@@ -218,6 +226,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
                 </div>
 
                 <Button
+                  onClick={() => window.open(project.link, '_blank')}
                   className="w-full bg-navy hover:bg-navy/90 text-white font-poppins font-semibold rounded-full transition-all duration-300 hover:scale-105 group"
                 >
                   {project.cta}
