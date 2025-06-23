@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ExternalLink, Smartphone, Globe, Catalog, BookOpen } from 'lucide-react';
+import { ExternalLink, Smartphone, Globe, FileText, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -132,7 +132,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
     { id: 'all', label: t.allProjects, icon: null },
     { id: 'mobile', label: t.mobileApp, icon: Smartphone },
     { id: 'website', label: t.website, icon: Globe },
-    { id: 'catalog', label: t.digitalCatalog, icon: Catalog },
+    { id: 'catalog', label: t.digitalCatalog, icon: FileText },
     { id: 'training', label: t.trainingSystem, icon: BookOpen },
   ];
 
