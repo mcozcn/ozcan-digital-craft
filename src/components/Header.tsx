@@ -1,18 +1,17 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 interface HeaderProps {
   language: 'tr' | 'en';
   toggleLanguage: () => void;
 }
-
-const Header: React.FC<HeaderProps> = ({ language, toggleLanguage }) => {
+const Header: React.FC<HeaderProps> = ({
+  language,
+  toggleLanguage
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-
   const translations = {
     tr: {
       home: 'Ana Sayfa',
@@ -35,9 +34,7 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage }) => {
       slogan: 'Strategic Transformation through Digital Power'
     }
   };
-
   const t = translations[language];
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -52,48 +49,47 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage }) => {
         }
         return false;
       });
-      
       if (currentSection) {
         setActiveSection(currentSection);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
     setIsMenuOpen(false);
   };
-
-  const menuItems = [
-    { id: 'home', label: t.home },
-    { id: 'about', label: t.about },
-    { id: 'experiences', label: t.experiences },
-    { id: 'projects', label: t.projects },
-    { id: 'skills', label: t.skills },
-    { id: 'contact', label: t.contact },
-  ];
-
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-navy/95 backdrop-blur-md shadow-lg' 
-        : 'bg-navy/80 backdrop-blur-sm'
-    }`}>
+  const menuItems = [{
+    id: 'home',
+    label: t.home
+  }, {
+    id: 'about',
+    label: t.about
+  }, {
+    id: 'experiences',
+    label: t.experiences
+  }, {
+    id: 'projects',
+    label: t.projects
+  }, {
+    id: 'skills',
+    label: t.skills
+  }, {
+    id: 'contact',
+    label: t.contact
+  }];
+  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-navy/95 backdrop-blur-md shadow-lg' : 'bg-navy/80 backdrop-blur-sm'}`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo & Brand */}
           <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/7b7b861f-4b8a-4101-afd5-9be80ed50d1f.png" 
-              alt="Mücahit Özcan Logo" 
-              className="w-10 h-10 object-contain"
-            />
+            <img src="/lovable-uploads/7b7b861f-4b8a-4101-afd5-9be80ed50d1f.png" alt="Mücahit Özcan Logo" className="w-12 h-12 object-contain" />
             <div className="flex flex-col">
               <h1 className="text-xl md:text-2xl font-poppins font-bold text-white tracking-wide">
                 MÜCAHİT ÖZCAN
@@ -106,90 +102,53 @@ const Header: React.FC<HeaderProps> = ({ language, toggleLanguage }) => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {menuItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`relative font-inter font-medium transition-colors duration-300 hover:text-gold ${
-                  activeSection === item.id ? 'text-gold' : 'text-white'
-                }`}
-              >
+            {menuItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className={`relative font-inter font-medium transition-colors duration-300 hover:text-gold ${activeSection === item.id ? 'text-gold' : 'text-white'}`}>
                 {item.label}
-                {activeSection === item.id && (
-                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gold animate-fade-in" />
-                )}
-              </button>
-            ))}
+                {activeSection === item.id && <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gold animate-fade-in" />}
+              </button>)}
           </nav>
 
           {/* Language Switcher & CTA */}
           <div className="hidden lg:flex items-center space-x-4">
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center space-x-2 text-white hover:text-gold transition-colors duration-300"
-            >
+            <button onClick={toggleLanguage} className="flex items-center space-x-2 text-white hover:text-gold transition-colors duration-300">
               <Globe size={18} />
               <span className="font-inter text-sm">
                 {language === 'tr' ? '🇹🇷 TR' : '🇬🇧 EN'}
               </span>
             </button>
             
-            <Button
-              onClick={() => scrollToSection('contact')}
-              className="bg-gold hover:bg-gold/90 text-navy font-poppins font-semibold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
-            >
+            <Button onClick={() => scrollToSection('contact')} className="bg-gold hover:bg-gold/90 text-navy font-poppins font-semibold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg">
               {t.contactMe}
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-white hover:text-gold transition-colors duration-300"
-          >
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden text-white hover:text-gold transition-colors duration-300">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden mt-4 py-4 border-t border-white/20 animate-fade-in">
+        {isMenuOpen && <div className="lg:hidden mt-4 py-4 border-t border-white/20 animate-fade-in">
             <nav className="flex flex-col space-y-4">
-              {menuItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`text-left font-inter font-medium transition-colors duration-300 hover:text-gold ${
-                    activeSection === item.id ? 'text-gold' : 'text-white'
-                  }`}
-                >
+              {menuItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className={`text-left font-inter font-medium transition-colors duration-300 hover:text-gold ${activeSection === item.id ? 'text-gold' : 'text-white'}`}>
                   {item.label}
-                </button>
-              ))}
+                </button>)}
               <div className="flex items-center justify-between pt-4 border-t border-white/20">
-                <button
-                  onClick={toggleLanguage}
-                  className="flex items-center space-x-2 text-white hover:text-gold transition-colors duration-300"
-                >
+                <button onClick={toggleLanguage} className="flex items-center space-x-2 text-white hover:text-gold transition-colors duration-300">
                   <Globe size={18} />
                   <span className="font-inter text-sm">
                     {language === 'tr' ? '🇹🇷 TR' : '🇬🇧 EN'}
                   </span>
                 </button>
                 
-                <Button
-                  onClick={() => scrollToSection('contact')}
-                  className="bg-gold hover:bg-gold/90 text-navy font-poppins font-semibold px-4 py-2 rounded-full"
-                >
+                <Button onClick={() => scrollToSection('contact')} className="bg-gold hover:bg-gold/90 text-navy font-poppins font-semibold px-4 py-2 rounded-full">
                   {t.contactMe}
                 </Button>
               </div>
             </nav>
-          </div>
-        )}
+          </div>}
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
