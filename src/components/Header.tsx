@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logoImage from '@/images/logo.png';
+
 interface HeaderProps {
   language: 'tr' | 'en';
   toggleLanguage: () => void;
 }
+
 const Header: React.FC<HeaderProps> = ({
   language,
   toggleLanguage
@@ -34,7 +37,9 @@ const Header: React.FC<HeaderProps> = ({
       slogan: 'Strategic Transformation through Digital Power'
     }
   };
+
   const t = translations[language];
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -56,6 +61,7 @@ const Header: React.FC<HeaderProps> = ({
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -65,6 +71,7 @@ const Header: React.FC<HeaderProps> = ({
     }
     setIsMenuOpen(false);
   };
+
   const menuItems = [{
     id: 'home',
     label: t.home
@@ -84,12 +91,13 @@ const Header: React.FC<HeaderProps> = ({
     id: 'contact',
     label: t.contact
   }];
+
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-navy/95 backdrop-blur-md shadow-lg' : 'bg-navy/80 backdrop-blur-sm'}`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo & Brand */}
           <div className="flex items-center space-x-3">
-            <img src="/lovable-uploads/7b7b861f-4b8a-4101-afd5-9be80ed50d1f.png" alt="Mücahit Özcan Logo" className="w-12 h-12 object-contain" />
+            <img src={logoImage} alt="Mücahit Özcan Logo" className="w-12 h-12 object-contain" />
             <div className="flex flex-col">
               <h1 className="text-xl md:text-2xl font-poppins font-bold text-white tracking-wide">
                 MÜCAHİT ÖZCAN
@@ -151,4 +159,5 @@ const Header: React.FC<HeaderProps> = ({
       </div>
     </header>;
 };
+
 export default Header;
