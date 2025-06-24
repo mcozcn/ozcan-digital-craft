@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "./", // GitHub Pages için relative path kullan
+  base: "/ozcan-digital-craft/", // GitHub Pages için repository adını kullan
   server: {
     host: "::",
     port: 8080,
