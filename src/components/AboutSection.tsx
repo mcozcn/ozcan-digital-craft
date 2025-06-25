@@ -2,9 +2,12 @@ import React from 'react';
 import { Brain, Users, Laptop, Target } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import heroImage from '@/images/hero.png';
+
 interface AboutSectionProps {
   language: 'tr' | 'en';
 }
+
 const AboutSection: React.FC<AboutSectionProps> = ({
   language
 }) => {
@@ -124,7 +127,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
           <div className="flex justify-center animate-fade-in-right">
             <div className="relative">
               <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                <img alt="Mücahit Özcan" src={heroImage}" className="w-full h-full object-contain" />
+                <img alt="Mücahit Özcan" src={heroImage} className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gold rounded-full flex items-center justify-center shadow-lg">
                 <span className="text-2xl">🚀</span>
@@ -159,4 +162,5 @@ const AboutSection: React.FC<AboutSectionProps> = ({
       </div>
     </section>;
 };
+
 export default AboutSection;
