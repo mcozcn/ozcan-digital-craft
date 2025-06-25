@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logoImage from '@/images/logo.png';
 
 interface HeaderProps {
   language: 'tr' | 'en';
@@ -16,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({
   const [activeSection, setActiveSection] = useState('home');
   
   // Geçici placeholder logo URL'i
-  const logoImage = "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=200&h=200&fit=crop&crop=center";
+  //const logoImage = "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=200&h=200&fit=crop&crop=center";
   
   const translations = {
     tr: {

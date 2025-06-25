@@ -1,8 +1,11 @@
-
 import React, { useState } from 'react';
 import { ExternalLink, Smartphone, Globe, FileText, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import beautiqImage from '@/images/beautiq.png';
+import turkuazImage from '@/images/Turkuaz.png';
+import hanedanImage from '@/images/hanedan.png';
+import degirmenImage from '@/images/degirmen.png';
 
 interface ProjectsSectionProps {
   language: 'tr' | 'en';
