@@ -2,6 +2,7 @@
 import React from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import heroImage from '@/images/hero.png';
 
 interface HeroSectionProps {
   language: 'tr' | 'en';
@@ -38,7 +39,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ language }) => {
     <section id="home" className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-primary">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: `url(${heroImage})` }}></div>
         <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent"></div>
       </div>
 
