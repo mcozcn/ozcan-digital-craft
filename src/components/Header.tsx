@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logoImage from '@/images/logo.png';
 
 interface HeaderProps {
   language: 'tr' | 'en';
@@ -15,6 +14,10 @@ const Header: React.FC<HeaderProps> = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  
+  // Geçici placeholder logo URL'i
+  const logoImage = "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=200&h=200&fit=crop&crop=center";
+  
   const translations = {
     tr: {
       home: 'Ana Sayfa',
@@ -97,7 +100,7 @@ const Header: React.FC<HeaderProps> = ({
         <div className="flex items-center justify-between">
           {/* Logo & Brand */}
           <div className="flex items-center space-x-3">
-            <img src={logoImage} alt="Mücahit Özcan Logo" className="w-12 h-12 object-contain" />
+            <img src={logoImage} alt="Mücahit Özcan Logo" className="w-12 h-12 object-contain rounded-full" />
             <div className="flex flex-col">
               <h1 className="text-xl md:text-2xl font-poppins font-bold text-white tracking-wide">
                 MÜCAHİT ÖZCAN

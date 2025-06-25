@@ -3,10 +3,6 @@ import React, { useState } from 'react';
 import { ExternalLink, Smartphone, Globe, FileText, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import beautiqImage from '@/images/beautiq.png';
-import turkuazImage from '@/images/Turkuaz.png';
-import hanedanImage from '@/images/hanedan.png';
-import degirmenImage from '@/images/degirmen.png';
 
 interface ProjectsSectionProps {
   language: 'tr' | 'en';
@@ -14,6 +10,12 @@ interface ProjectsSectionProps {
 
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({ language }) => {
   const [activeFilter, setActiveFilter] = useState('all');
+
+  // Geçici placeholder resimler
+  const beautiqImage = "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop";
+  const turkuazImage = "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop";
+  const hanedanImage = "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop";
+  const degirmenImage = "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop";
 
   const translations = {
     tr: {
