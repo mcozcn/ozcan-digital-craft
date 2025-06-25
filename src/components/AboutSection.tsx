@@ -124,7 +124,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
           <div className="flex justify-center animate-fade-in-right">
             <div className="relative">
               <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                <img alt="Mücahit Özcan" src="/lovable-uploads/db14ff56-c72a-42cd-83dc-d266069e8240.png" className="w-full h-full object-contain" />
+                <img alt="Mücahit Özcan" src="/images/hero.png" className="w-full h-full object-contain" />
               </div>
               <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gold rounded-full flex items-center justify-center shadow-lg">
                 <span className="text-2xl">🚀</span>
